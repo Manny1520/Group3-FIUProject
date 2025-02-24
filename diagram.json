@@ -1,0 +1,42 @@
+{
+  "version": 1,
+  "author": "Anonymous maker",
+  "editor": "wokwi",
+  "parts": [
+    {
+      "type": "wokwi-pi-pico",
+      "id": "pico",
+      "top": -47.1,
+      "left": -115.45,
+      "rotate": 270,
+      "attrs": { "env": "micropython-20231227-v1.22.0" }
+    },
+    {
+      "type": "wokwi-lcd1602",
+      "id": "lcd1",
+      "top": -368,
+      "left": -215.2,
+      "attrs": { "pins": "i2c" }
+    },
+    { "type": "wokwi-servo", "id": "servo1", "top": -213.2, "left": -86.4, "attrs": {} },
+    { "type": "wokwi-membrane-keypad", "id": "keypad1", "top": -242, "left": 101.6, "attrs": {} }
+  ],
+  "connections": [
+    [ "pico:GP0", "lcd1:SDA", "green", [ "v19.2", "h-67.2", "v-192.2" ] ],
+    [ "pico:GP1", "lcd1:SCL", "orange", [ "v28.8", "h-96", "v-192.3" ] ],
+    [ "pico:VBUS", "lcd1:VCC", "blue", [ "h-96", "v-116.5" ] ],
+    [ "pico:GND.8", "lcd1:GND", "black", [ "v-20.4", "h-96", "v-105.6" ] ],
+    [ "servo1:V+", "pico:VBUS", "blue", [ "v19.2", "h-355.1" ] ],
+    [ "servo1:GND", "pico:GND.5", "black", [ "h-19.2", "v57.6", "h105.6" ] ],
+    [ "servo1:PWM", "pico:GP16", "#8f4814", [ "h-38.4", "v76.8", "h144" ] ],
+    [ "pico:GP2", "keypad1:R1", "green", [ "v96", "h201.6" ] ],
+    [ "keypad1:R2", "pico:GP3", "green", [ "v115.2", "h-173.2", "v0", "h-28.8" ] ],
+    [ "keypad1:R3", "pico:GP4", "green", [ "v134.4", "h-201.9" ] ],
+    [ "keypad1:R4", "pico:GP5", "green", [ "v153.6", "h-201.8" ] ],
+    [ "pico:GP6", "keypad1:C1", "violet", [ "v192", "h192.1" ] ],
+    [ "keypad1:C2", "pico:GP7", "violet", [ "v201.6", "h-192" ] ],
+    [ "keypad1:C3", "pico:GP8", "violet", [ "v211.2", "h-192.15" ] ],
+    [ "keypad1:C4", "pico:GP9", "violet", [ "v220.8", "h-192.3" ] ]
+  ],
+  "dependencies": {}
+}
