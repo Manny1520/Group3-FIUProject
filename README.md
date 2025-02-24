@@ -1,5 +1,4 @@
-# Group3-Project
-MAZES Security Group - Sleep Tight With Security
+# Group3-Project || MAZES Security Group - Sleep Tight With Security
 
 In this project, a Raspberry Pi Pico will be used to design and construct a smart home security system that incorporates LED lighting, an LCD display module, passive and active buzzers, and an infrared motion sensor. Motion detection is the system's primary feature for improving home security. Alerts are triggered when the infrared motion sensor detects the presence of people or objects. The active and passive buzzers sound warnings when they detect something, and the LED lights change color, turning red to indicate an alert and green to indicate a safe environment. 
 
